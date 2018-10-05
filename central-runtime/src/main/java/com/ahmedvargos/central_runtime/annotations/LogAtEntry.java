@@ -1,0 +1,17 @@
+package com.ahmedvargos.central_runtime.annotations;
+
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.METHOD})
+public @interface LogAtEntry {
+    enum CustomerType {
+        POSTPAID,PREPAID,ENDUSER,SPOC,CONTROL,EASY
+    }
+    CustomerType customerType() default CustomerType.PREPAID;
+
+}

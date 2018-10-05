@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CentralAnnotations</string>
+    <string name="no_user_set">No User Set!</string>
+    <string name="normal_user_set">Normal User Set!</string>
+    <string name="premium_user_set">Premium User Set!</string>
+    <string name="admin_set">Admin Set!</string>
+</resources>

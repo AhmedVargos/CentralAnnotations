@@ -1,1 +1,1 @@
-include ':app', ':central-runtime', ':central-plugin'
+include ':app', ':central-runtime', ':central-plugin', ':central-main-plugin'

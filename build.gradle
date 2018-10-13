@@ -9,7 +9,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.2.0'
         classpath 'org.gradle.api.plugins:gradle-nexus-plugin:0.7'
         classpath 'org.aspectj:aspectjtools:1.8.6'
         classpath files('central-main-plugin.jar')

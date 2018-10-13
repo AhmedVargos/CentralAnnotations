@@ -28,7 +28,7 @@ class CentralPlugin implements Plugin<Project> {
     project.dependencies {
 //      debugCompile(name:'central-runtime-release', ext:'aar')
 
-      debugCompile 'org.aspectj:aspectjrt:1.8.6'
+      debugImplementation 'org.aspectj:aspectjrt:1.8.6'
     }
 
     project.extensions.create('central', CentralExtension)

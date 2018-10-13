@@ -8,6 +8,7 @@ import com.ahmedvargos.central_runtime.Central;
 import com.ahmedvargos.central_runtime.annotations.LogAtEntry;
 import com.ahmedvargos.central_runtime.annotations.RestrictToType;
 
+
 public class ExampleActivity extends AppCompatActivity {
 
     private static final int NORMAL_USER = 0;

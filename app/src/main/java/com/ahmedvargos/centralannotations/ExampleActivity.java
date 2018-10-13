@@ -8,6 +8,8 @@ import com.ahmedvargos.central_runtime.Central;
 import com.ahmedvargos.central_runtime.annotations.LogAtEntry;
 import com.ahmedvargos.central_runtime.annotations.RestrictToType;
 
+import java.text.Normalizer;
+
 
 public class ExampleActivity extends AppCompatActivity {
 
@@ -38,13 +40,12 @@ public class ExampleActivity extends AppCompatActivity {
     }
 
 
-    @LogAtEntry
     @RestrictToType(type = PREMIUM_USER)
     private void setAsPremiumUser() {
         textView.setText(getString(R.string.premium_user_set));
     }
 
-
+    @LogAtEntry
     @RestrictToType(type = NORMAL_USER)
     private void setAsNormalUser() {
         textView.setText(getString(R.string.normal_user_set));

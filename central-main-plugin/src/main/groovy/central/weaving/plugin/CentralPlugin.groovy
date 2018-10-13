@@ -25,10 +25,16 @@ class CentralPlugin implements Plugin<Project> {
       variants = project.android.libraryVariants
     }
 
-    project.dependencies {
+    project.afterEvaluate {
+      project.dependencies {
 //      debugCompile(name:'central-runtime-release', ext:'aar')
 
-      debugImplementation 'org.aspectj:aspectjrt:1.8.6'
+        debugImplementation 'com.ahmedvargos:central-runtime:1.0.0'
+        debugImplementation 'org.aspectj:aspectjrt:1.8.6'
+        implementation 'com.ahmedvargos:central-runtime:1.0.0'
+        implementation 'org.aspectj:aspectjrt:1.8.6'
+
+      }
     }
 
     project.extensions.create('central', CentralExtension)

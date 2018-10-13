@@ -4,14 +4,13 @@ import org.aspectj.tools.ajc.Main
 
 
 apply plugin: 'com.android.library'
-
-
+apply plugin: 'maven'
 android {
-    compileSdkVersion 28
+    compileSdkVersion 27
 
     defaultConfig {
         minSdkVersion 17
-        targetSdkVersion 28
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
 
@@ -65,6 +64,18 @@ android.libraryVariants.all { variant ->
                     log.debug message.message, message.thrown
                     break;
             }
+        }
+    }
+}
+
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = GROUP
+            pom.artifactId = ANNOTATIONS_ID
+            pom.version = "1.0.0"
+            repository(url: uri('D:/Projects/local-maven'))
         }
     }
 }

@@ -50,6 +50,6 @@ public class CentralAspect {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
 
-        Log.v(method.getDeclaringClass().getSimpleName(), "The " + method.getName() + " has been accessed!");
+        Log.d(method.getDeclaringClass().getSimpleName(), "The " + method.getName() + " Method has been accessed!");
     }
 }

@@ -11,7 +11,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.0'
         classpath 'org.aspectj:aspectjtools:1.8.6'
-        //classpath 'com.github.AhmedVargos:CentralAnnotations::1.0.0'
+        classpath 'com.github.AhmedVargos:CentralAnnotations:0.4'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
         // NOTE: Do not place your application dependencies here; they belong

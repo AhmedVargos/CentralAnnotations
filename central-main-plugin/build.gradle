@@ -1,6 +1,10 @@
 apply plugin: 'groovy'
-apply plugin: 'maven'
 apply plugin: 'com.novoda.bintray-release'
+
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = "com.github.ahmedvargos"
+version = '1.0.0'
 
 targetCompatibility = JavaVersion.VERSION_1_8
 sourceCompatibility = JavaVersion.VERSION_1_8

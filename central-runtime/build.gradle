@@ -4,7 +4,11 @@ import org.aspectj.tools.ajc.Main
 
 
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = "com.github.ahmedvargos"
+version = '1.0.0'
+
 android {
     compileSdkVersion 27
 

@@ -31,7 +31,7 @@ class CentralPlugin implements Plugin<Project> {
 
         debugImplementation 'com.ahmedvargos:central-runtime:1.0.0'
         debugImplementation 'org.aspectj:aspectjrt:1.8.6'
-        implementation 'com.ahmedvargos:central-runtime:1.0.0'
+        implementation 'com.github.AhmedVargos:CentralAnnotations:0.1'
         implementation 'org.aspectj:aspectjrt:1.8.6'
 
       }
@@ -42,10 +42,10 @@ class CentralPlugin implements Plugin<Project> {
     variants.all { variant ->
       if (!variant.buildType.isDebuggable()) {
         log.debug("Skipping non-debuggable build type '${variant.buildType.name}'.")
-        return;
+        return
       } else if (!project.central.enabled) {
         log.debug("Central is not disabled.")
-        return;
+        return
       }
 
       JavaCompile javaCompile = variant.javaCompile
@@ -61,24 +61,24 @@ class CentralPlugin implements Plugin<Project> {
         ]
         log.debug "ajc args: " + Arrays.toString(args)
 
-        MessageHandler handler = new MessageHandler(true);
-        new Main().run(args, handler);
+        MessageHandler handler = new MessageHandler(true)
+        new Main().run(args, handler)
         for (IMessage message : handler.getMessages(null, true)) {
           switch (message.getKind()) {
             case IMessage.ABORT:
             case IMessage.ERROR:
             case IMessage.FAIL:
               log.error message.message, message.thrown
-              break;
+              break
             case IMessage.WARNING:
               log.warn message.message, message.thrown
-              break;
+              break
             case IMessage.INFO:
               log.info message.message, message.thrown
-              break;
+              break
             case IMessage.DEBUG:
               log.debug message.message, message.thrown
-              break;
+              break
           }
         }
       }

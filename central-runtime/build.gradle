@@ -72,14 +72,3 @@ android.libraryVariants.all { variant ->
     }
 }
 
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            pom.groupId = GROUP
-            pom.artifactId = ANNOTATIONS_ID
-            pom.version = "1.0.0"
-            repository(url: uri('D:/Projects/local-maven'))
-        }
-    }
-}

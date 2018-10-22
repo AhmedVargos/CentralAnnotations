@@ -27,12 +27,12 @@ class CentralPlugin implements Plugin<Project> {
 
     project.afterEvaluate {
       project.dependencies {
-//      debugCompile(name:'central-runtime-release', ext:'aar')
+      debugCompile(name:'central-runtime-release', ext:'aar')
 
-//        debugImplementation 'com.ahmedvargos:central-runtime:1.0.0'
-//        debugImplementation 'org.aspectj:aspectjrt:1.8.6'
-//        implementation 'com.github.AhmedVargos:CentralAnnotations:0.1'
-//        implementation 'org.aspectj:aspectjrt:1.8.6'
+        debugImplementation 'com.github.AhmedVargos:CentralAnnotations:0.3'
+        debugImplementation 'org.aspectj:aspectjrt:1.8.6'
+        implementation 'com.github.AhmedVargos:CentralAnnotations:0.3'
+        implementation 'org.aspectj:aspectjrt:1.8.6'
 
       }
     }

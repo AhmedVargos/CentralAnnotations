@@ -28,9 +28,9 @@ class CentralPlugin implements Plugin<Project> {
     project.afterEvaluate {
 
       project.dependencies {
-        debugImplementation 'com.github.AhmedVargos:CentralAnnotations:0.3'
+        debugImplementation 'com.github.AhmedVargos:CentralAnnotations:0.5'
         debugImplementation 'org.aspectj:aspectjrt:1.8.6'
-        implementation 'com.github.AhmedVargos:CentralAnnotations:0.3'
+        implementation 'com.github.AhmedVargos:CentralAnnotations:0.5'
         implementation 'org.aspectj:aspectjrt:1.8.6'
 
       }

@@ -8,7 +8,9 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 dependencies {
   implementation gradleApi()
   implementation localGroovy()
-  implementation 'com.android.tools.build:gradle:3.1.4'
+  implementation ('com.android.tools.build:gradle:3.1.4'){
+    exclude group: 'org.apache.httpcomponents'
+  }
   implementation 'org.aspectj:aspectjtools:1.8.6'
   implementation 'org.aspectj:aspectjrt:1.8.6'
 

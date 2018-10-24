@@ -15,7 +15,7 @@ dependencies {
         exclude module: 'commons-logging'
     }
     implementation 'org.aspectj:aspectjtools:1.8.6'
-    implementation 'org.aspectj:aspectjrt:1.8.6'
+    compileOnly 'org.aspectj:aspectjrt:1.8.6'
 
 }
 

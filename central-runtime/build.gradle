@@ -30,7 +30,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'org.aspectj:aspectjrt:1.8.6'
+    api 'org.aspectj:aspectjrt:1.8.6'
 
 }
 

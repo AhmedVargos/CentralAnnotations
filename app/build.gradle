@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin :'central'
 android {
     compileSdkVersion 27
     defaultConfig {

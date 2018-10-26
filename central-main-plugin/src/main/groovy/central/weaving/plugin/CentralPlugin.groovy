@@ -28,8 +28,8 @@ class CentralPlugin implements Plugin<Project> {
     project.afterEvaluate {
 
       project.dependencies {
-        debugImplementation 'com.github.AhmedVargos.CentralAnnotations:central-runtime:0.9.2'
-        implementation 'com.github.AhmedVargos.CentralAnnotations:central-runtime:0.9.2'
+        debugImplementation 'com.github.ahmedvargos.centralannotations:central-runtime:0.9.2'
+        implementation 'com.github.ahmedvargos.centralannotations:central-runtime:0.9.2'
 
       }
     }

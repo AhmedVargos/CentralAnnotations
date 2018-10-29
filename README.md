@@ -56,7 +56,7 @@ repositories {
 ```
 Then add it to your project by this line.
 ```
- classpath 'com.github.ahmedvargos.centralannotations:central-main-plugin:1.0'
+ classpath 'com.github.ahmedvargos.centralannotations:central-main-plugin:1.0.1'
 ```
 Finally apply the plugin in your module level `build.gradle`
 ```

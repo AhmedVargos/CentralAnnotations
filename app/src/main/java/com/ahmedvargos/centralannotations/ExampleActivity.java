@@ -35,7 +35,7 @@ public class ExampleActivity extends AppCompatActivity {
 
         Integer test = testMethod();
 
-        Log.e("MAIN", "onCreate: "+ test );
+        Log.e(ExampleActivity.class.getSimpleName(), "onCreate: "+ test );
     }
 
     @RestrictToType(type = NORMAL_USER)

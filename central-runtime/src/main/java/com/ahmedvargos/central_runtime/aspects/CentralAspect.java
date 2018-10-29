@@ -32,16 +32,18 @@ public class CentralAspect {
     }
 
     @Around("RestrictToTypeAnnotationMethod()")
-    public void checkMethodType(ProceedingJoinPoint joinPoint) throws Throwable{ //, RestrictToRatePlan annotation
+    public Object checkMethodType(ProceedingJoinPoint joinPoint) throws Throwable{ //, RestrictToRatePlan annotation
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         RestrictToType annotation = method.getAnnotation(RestrictToType.class);
 
         for (int i : annotation.type()) {
             if(Central.getType() == i){
-                joinPoint.proceed();
+                return joinPoint.proceed();
             }
         }
+
+        return null;
 
     }
 

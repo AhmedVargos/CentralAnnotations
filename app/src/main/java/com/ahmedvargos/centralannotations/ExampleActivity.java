@@ -2,6 +2,7 @@ package com.ahmedvargos.centralannotations;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 
@@ -23,7 +24,7 @@ public class ExampleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Set the library to the type you want to be used during the running
-        Central.setType(NORMAL_USER);
+        Central.setType(PREMIUM_USER);
         setContentView(R.layout.activity_example);
 
         textView = findViewById(R.id.text_view);
@@ -32,6 +33,14 @@ public class ExampleActivity extends AppCompatActivity {
         setAsPremiumUser();
         setAsAdmin();
 
+        Integer test = testMethod();
+
+        Log.e("MAIN", "onCreate: "+ test );
+    }
+
+    @RestrictToType(type = NORMAL_USER)
+    private Integer testMethod() {
+        return 5;
     }
 
     @LogAtEntry
